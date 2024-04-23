@@ -1,15 +1,11 @@
 
-
-<!-- home.component.html -->
 <div *ngIf="isLoggedIn; else loggedOut">
     <h1>Welcome, {{ usuario?.nombre }}!</h1>
     <button (click)="logout()">Log Out</button>
-    <!-- Enlaces a los juegos -->
     <div>
       <a routerLink="/juego-ahorcado">Ahorcado</a>
       <a routerLink="/juego-mayor-o-menor">Mayor o Menor</a>
       <a routerLink="/juego-preguntados">Preguntados</a>
-      <!-- Añade aquí más enlaces según los juegos que tengas -->
     </div>
   </div>
   

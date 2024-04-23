@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../models/usuario';
 import { AuthService } from '../../servicios/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,9 @@ export class HomeComponent implements OnInit {
   isLoggedIn = false;
   usuario: Usuario | undefined; // usuario puede ser de tipo Usuario o undefined
 
-  constructor(private authService: AuthService) {}
+  constructor(private router: Router) {} //  private authService: AuthService) {}
+
+  
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }

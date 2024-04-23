@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Usuario } from '../../models/usuario';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -18,7 +18,7 @@ export class RegistroComponent {
     email: ''
   };
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   onSubmit() {
     console.log('Registro Data:', this.registroData);
