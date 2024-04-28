@@ -1,6 +1,5 @@
 export interface Usuario {
-    nombre: string;
-    contras: string;
-    email: string;
-}
-
+    username: string;
+    password: string;
+    email?: string;  //para el registro
+};

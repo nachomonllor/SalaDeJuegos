@@ -14,26 +14,38 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class LoginComponent {
-  loginData: Usuario = {
-    nombre: '', contras: '',
-    email: ''
-  }; 
+  // loginData: Usuario = {
+  //   nombre: '', contras: '',
+  //   email: ''
+  // }; 
 
 
-  constructor(private router: Router) {}
-  // constructor(private authService: AuthService) {} //, private router: Router) {}
+  // constructor(private router: Router) {}
+  // // constructor(private authService: AuthService) {} //, private router: Router) {}
 
 
+
+  // onSubmit() {
+  //  /*
+  //   this.authService.login(this.loginData).then(res => {
+  //     console.log('Login successful', res);
+  //     this.router.navigate(['/home']); // Asegúrate de que la ruta '/home' está configurada en tu router
+  //   }).catch(err => {
+  //     console.error('Login failed', err);
+  //   });
+  //  */
+  // }
+
+
+  user = {
+    login: '',
+    password: ''
+  };
 
   onSubmit() {
-   /*
-    this.authService.login(this.loginData).then(res => {
-      console.log('Login successful', res);
-      this.router.navigate(['/home']); // Asegúrate de que la ruta '/home' está configurada en tu router
-    }).catch(err => {
-      console.error('Login failed', err);
-    });
-   */
+    console.log('Usuario:', this.user.login);
+    console.log('Contraseña:', this.user.password);
+    // Aquí agregarías la lógica para verificar las credenciales
   }
   
 }
